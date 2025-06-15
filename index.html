@@ -14,13 +14,18 @@
       --text: #2f2f2f;
     }
 
+    /* Tiki wood background */
     body {
       margin: 0;
       padding: 0;
-      background: var(--bg);
-      color: var(--text);
       font-family: 'Rubik', sans-serif;
       line-height: 1.6;
+      color: var(--text);
+      background: 
+        linear-gradient(90deg, #8b5e3c 0 4px, transparent 4px 8px),
+        linear-gradient(#8b5e3c 0 4px, #deb887 4px 8px);
+      background-size: 40px 40px;
+      background-repeat: repeat;
     }
 
     header {
@@ -28,13 +33,16 @@
       padding: 60px 20px 30px;
       background: linear-gradient(135deg, var(--primary), #005f5f);
       color: #fff;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      position: relative;
     }
 
-    header h1 {
-      font-family: 'Permanent Marker', cursive;
-      font-size: 3.5rem;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
+    header img {
+      max-width: 250px;
+      width: 90%;
+      filter: invert(1); /* invert the logo colors */
+      mix-blend-mode: screen; /* helps the inverted logo blend nicely */
     }
 
     nav {
@@ -94,11 +102,12 @@
       padding: 30px 20px;
       background: var(--primary);
       color: white;
+      border-radius: 40px 40px 0 0;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
+      header img {
+        max-width: 180px;
       }
       nav a {
         display: inline-block;
@@ -110,7 +119,7 @@
 <body>
 
   <header>
-    <h1>Zaruna</h1>
+    <img src="zaruna-logo-inverted.png" alt="Zaruna Logo" />
     <p>Genre-bending alt-rock from the West Midlands</p>
   </header>
 
