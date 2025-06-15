@@ -1,34 +1,162 @@
-body {
-  background-color: #f9fafb; /* light grey/white */
-  color: #333; /* dark grey text */
-  font-family: 'Poppins', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zaruna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --primary: #007f7f;
+      --secondary: #ff6b35;
+      --accent: #ffe156;
+      --text: #2f2f2f;
+    }
 
-header, footer {
-  background-color: #e0f7fa; /* soft cyan */
-  color: #00796b; /* teal */
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Rubik', sans-serif;
+      line-height: 1.6;
+    }
 
-a {
-  color: #00796b;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: linear-gradient(135deg, var(--primary), #005f5f);
+      color: #fff;
+    }
 
-a:hover {
-  color: #004d40;
-}
+    header h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
 
-button {
-  background-color: #80deea; /* pastel cyan */
-  color: #004d40;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    nav {
+      background: var(--accent);
+      padding: 10px 0;
+      text-align: center;
+    }
 
-button:hover {
-  background-color: #26c6da;
-}
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+      color: var(--primary);
+      border-bottom: 3px solid var(--secondary);
+      padding-bottom: 10px;
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    .media-embed iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: var(--secondary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: var(--primary);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zaruna</h1>
+    <p>Genre-bending alt-rock from the West Midlands</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#media">Media</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Zaruna is a genre-bending alt-rock trio from the West Midlands, UK, known for their gritty 2000s aesthetic and unpredictable, high-energy sound. Blending the fuzzed-out punch of Foo Fighters, the reggae-laced grooves of The Police, and the experimental spirit of Ween, Zaruna delivers a sound that's raw, DIY, and proudly weird.
+    </p>
+    <p>
+      From heavy riffs to off-kilter rhythms, soft ballads to reggae-infused jams, Zaruna shifts effortlessly between styles—making each track a surprise and every live show unforgettable. The band plays every gig like it’s their last, channeling their passion into performances that linger long after the final note.
+    </p>
+    <p>
+      With a love for the greats and a dedication to carving their own sonic path, Zaruna appeals to a wide, mixed audience—there’s truly something for everyone. Catch their latest musical experiments on all streaming platforms.
+    </p>
+  </section>
+
+  <section id="media">
+    <h2>Media</h2>
+    <div class="media-embed">
+      <h3>YouTube</h3>
+      <iframe src="https://www.youtube.com/embed/EeVpN1lYMZo" allowfullscreen></iframe>
+    </div>
+    <div class="media-embed">
+      <h3>Bandcamp</h3>
+      <iframe style="border: 0; width: 100%; height: 120px;" 
+        src="https://bandcamp.com/EmbeddedPlayer/album=2317750977/size=large/bgcol=ffffff/linkcol=007f7f/tracklist=false/transparent=true/" 
+        seamless>
+      </iframe>
+      <p><a href="https://zaruna.bandcamp.com/album/hula" target="_blank">Listen to "Hula" on Bandcamp</a></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Booking / Press / Anything else: <a href="mailto:zarunaband@gmail.com">zarunaband@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zaruna. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
